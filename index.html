@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Fam</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #ADD8E6; /* light blue */
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .screen-center h1 {
+      font-size: 48px; /* bigger text */
+      text-align: center;
+      color: #000; /* black text for contrast */
+    }
+  </style>
+</head>
+<body>
+
+<div class="screen-center">
+  <h1 id="welcomeText"></h1>
+</div>
+
+<script>
+const emojis = ["🔥","📚","🚀","💪","😤","🧠"];
+document.getElementById("welcomeText").innerText =
+"Study sech, who's in? " + emojis[Math.floor(Math.random()*emojis.length)];
+
+document.body.addEventListener("click", () => {
+  window.location.href = "login.html";
+});
+</script>
+
+</body>
+</html>

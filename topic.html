@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Topic</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2 id="topicTitle"></h2>
+
+<button id="addSubBtn" onclick=loadSubtopics()>+ Add Subtopic</button>
+
+<!-- Subtopic Input Field -->
+<div id="subForm" class="sub-form hidden">
+  <input type="text" id="subInput" placeholder="Enter Subtopic Name">
+  <button id="saveSubBtn">Add</button>
+</div>
+
+<div id="subtopics"></div>
+
+<br>
+<button class="back-btn" onclick="window.location.href='dashboard.html'">
+  ← Back
+</button>
+
+<script type="module" src="js/topics.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard - Study Fam</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar">
+  <button onclick="toggleTopicForm()">+ New Topic</button>
+</div>
+
+<h2>TOPIC CHECK📝</h2>
+
+<!-- Hidden Topic Form -->
+<div id="topicForm" style="display:none;">
+  <input type="text" id="topicInput" placeholder="Enter Topic Name">
+  <button onclick="createTopic()">Add</button>
+</div>
+
+<div id="topics"></div>
+
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

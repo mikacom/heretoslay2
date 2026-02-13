@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer - Study Fam</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio id="alarmSound" src="assets/alarm.mp3" preload="auto"></audio>
+
+<h2 id="sessionTitle">Study Session</h2>
+
+<input type="number" id="minutesInput" placeholder="Enter Minutes">
+<button id="startBtn">Start</button>
+
+<h1 id="timerDisplay"></h1>
+<div id="warningText" class="warning"></div>
+
+<br>
+<button onclick="window.location.href='topic.html'">← Back</button>
+
+<script type="module" src="js/timer.js"></script>
+<button onclick="stopAlarm()">Stop Alarm</button>
+</body>
+</html>
