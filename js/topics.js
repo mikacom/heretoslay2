@@ -123,4 +123,5 @@ async function createSubtopic() {
   subForm.classList.add("hidden");
 
   loadSubtopics(uid);
+  
 }

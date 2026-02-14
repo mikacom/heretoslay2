@@ -14,10 +14,29 @@
       font-family: Arial, sans-serif;
     }
 
+    .screen-center {
+      text-align: center;
+    }
+
     .screen-center h1 {
       font-size: 48px; /* bigger text */
-      text-align: center;
       color: #000; /* black text for contrast */
+      margin-bottom: 40px;
+    }
+
+    #startBtn {
+      font-size: 24px;
+      padding: 15px 30px;
+      background-color: #942792; /* light blue */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #startBtn:hover {
+      background-color: #3c00ff; /* darker blue on hover */
     }
   </style>
 </head>
@@ -25,6 +44,7 @@
 
 <div class="screen-center">
   <h1 id="welcomeText"></h1>
+  <button id="startBtn">Click Here</button>
 </div>
 
 <script>
@@ -32,11 +52,11 @@ const emojis = ["🔥","📚","🚀","💪","😤","🧠"];
 document.getElementById("welcomeText").innerText =
 "Study sech, who's in? " + emojis[Math.floor(Math.random()*emojis.length)];
 
-document.body.addEventListener("click", () => {
+// Button click navigates to login page
+document.getElementById("startBtn").addEventListener("click", () => {
   window.location.href = "login.html";
 });
 </script>
 
 </body>
-
 </html>

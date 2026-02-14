@@ -3,22 +3,98 @@
 <head>
   <title>Dashboard - Study Fam</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background-color: #C8E6C9; /* light olive green */
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 36px; /* bigger text */
+      margin-bottom: 30px;
+      color: #2F4F4F; /* dark shade for contrast */
+    }
+
+    .topic-section {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    #topicForm {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    #topicForm input {
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    #topicForm button {
+      font-size: 20px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      background-color: #87CEFA;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #topicForm button:hover {
+      background-color: #00BFFF;
+    }
+
+    #newTopicBtn {
+      font-size: 20px;
+      padding: 10px 25px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background-color: #87CEFA; /* light blue button */
+      color: #fff;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    #newTopicBtn:hover {
+      background-color: #00BFFF;
+    }
+
+    #topics {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="top-bar">
-  <button onclick="toggleTopicForm()">+ New Topic</button>
-</div>
-
 <h2>TOPIC CHECK📝</h2>
 
-<!-- Hidden Topic Form -->
-<div id="topicForm" style="display:none;">
-  <input type="text" id="topicInput" placeholder="Enter Topic Name">
-  <button onclick="createTopic()">Add</button>
-</div>
+<div class="topic-section">
+  <!-- New Topic Button -->
+  <button id="newTopicBtn" onclick="toggleTopicForm()">+ New Topic</button>
 
-<div id="topics"></div>
+  <!-- Hidden Topic Form -->
+  <div id="topicForm">
+    <input type="text" id="topicInput" placeholder="Enter Topic Name">
+    <button onclick="createTopic()">Add</button>
+  </div>
+
+  <!-- List of Topics -->
+  <div id="topics"></div>
+</div>
 
 <script type="module" src="js/dashboard.js"></script>
 

@@ -3,22 +3,98 @@
 <head>
   <title>Timer - Study Fam</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      /* Patterned background using CSS gradient stripes */
+      background: repeating-linear-gradient(
+        45deg,
+        #f0f8ff,
+        #f0f8ff 20px,
+        #e0f0ff 20px,
+        #e0f0ff 40px
+      );
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #sessionTitle {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #1E90FF;
+    }
+
+    #minutesInput {
+      padding: 12px;
+      font-size: 20px;
+      width: 150px;
+      margin-right: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    #startBtn {
+      padding: 12px 25px;
+      font-size: 20px;
+      border-radius: 8px;
+      border: none;
+      background-color: #1E90FF;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #startBtn:hover {
+      background-color: #104E8B;
+    }
+
+    #timerDisplay {
+      font-size: 100px; /* big timer */
+      margin: 40px 0;
+      color: #FF4500;
+    }
+
+    #warningText {
+      font-size: 24px;
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    button.back-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      background-color: #87CEFA;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button.back-btn:hover {
+      background-color: #fb2600;
+    }
+  </style>
 </head>
 <body>
-    <audio id="alarmSound" src="assets/alarm.mp3" preload="auto"></audio>
+  <audio id="alarmSound" src="assets/alarm.mp3" preload="auto"></audio>
 
-<h2 id="sessionTitle">Study Session</h2>
+  <h2 id="sessionTitle">Study Session</h2>
 
-<input type="number" id="minutesInput" placeholder="Enter Minutes">
-<button id="startBtn">Start</button>
+  <input type="number" id="minutesInput" placeholder="Enter time in min">
+  <button id="startBtn">Start</button>
 
-<h1 id="timerDisplay"></h1>
-<div id="warningText" class="warning"></div>
+  <h1 id="timerDisplay">00:00</h1>
+  <div id="warningText" class="warning"></div>
 
-<br>
-<button onclick="window.location.href='topic.html'">← Back</button>
+  <button class="back-btn" onclick="window.location.href='topic.html'">← Back</button>
 
-<script type="module" src="js/timer.js"></script>
-<button onclick="stopAlarm()">Stop Alarm</button>
+  <script type="module" src="js/timer.js"></script>
 </body>
 </html>
